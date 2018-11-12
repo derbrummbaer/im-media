@@ -78,7 +78,7 @@ apt-get dist-upgrade -qy
 # Begin Installation Mediatools
 ############################################################
 RUN apt-get install \
-libav-tools \
+ffmpeg \
 # libavcodec-extra-54 \
 mediainfo \
 handbrake-cli \
