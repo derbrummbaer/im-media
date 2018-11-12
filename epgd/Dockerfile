@@ -6,7 +6,7 @@
 ############################################################
 
 # Set the base Image
-FROM derbrummbaer/im-base-phusion1604:latest
+FROM derbrummbaer/im-base-phusion1804:latest
 
 # File Author / Maintainer
 MAINTAINER Sven Berger
@@ -42,8 +42,8 @@ RUN adduser --uid $USERID --gid 100 --disabled-login --no-create-home --disabled
 
 RUN apt-get update; \
 	apt-get install software-properties-common -y; \
-	apt-add-repository ppa:yavdr/main -y; \
 	apt-add-repository ppa:frodo-vdr/main -y
+#	apt-add-repository ppa:yavdr/main -y; \
 #	apt-add-repository ppa:frodo-vdr/stable-vdr; \
 RUN apt-get update; \
 	apt-get dist-upgrade -y
