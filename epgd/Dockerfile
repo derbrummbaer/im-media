@@ -53,7 +53,7 @@ RUN apt-get update; \
 ############################################################
 
 RUN apt-get install vdr-epg-daemon -y
-# rm nicht benötigt bei 18.04
+#   rm nicht benötigt bei 18.04
 #	rm /etc/init.d/epgd
 
 ############################################################
