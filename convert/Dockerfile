@@ -117,7 +117,4 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 # Container Start
 ############################################################
 
-#CMD ["/usr/bin/supervisord"]
-#ENTRYPOINT ["/usr/local/bin/vdr_merge"]
-#CMD ["/bin/bash"]
 ENTRYPOINT ["/etc/service/copy/run"]
