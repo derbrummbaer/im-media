@@ -59,23 +59,18 @@ RUN adduser --uid $USERID --gid 100 --disabled-login --no-create-home --disabled
 ############################################################
 # Update Repository and upgrade Software
 ############################################################
-COPY config/sources.list /etc/apt/sources.list
-RUN apt-get update; apt-get install apt-utils locales ubuntu-extras-keyring -y; apt-get update; apt-get dist-upgrade -y
+RUN apt-get update && \
+apt-get -qy dist-upgrade
 
 ############################################################
 # Konfigure timezone and locale
 ############################################################
-RUN echo "Europe/Berlin" > /etc/timezone; dpkg-reconfigure -f noninteractive tzdata
-RUN dpkg-reconfigure locales && locale-gen de_DE.UTF-8 && /usr/sbin/update-locale de_DE.UTF-8
-RUN echo 'de_DE.UTF-8 UTF-8' >> /etc/locale.gen ; locale-gen de_DE.UTF-8; echo LANG="de_DE.UTF-8" >> /etc/default/locale
+# Schon im Baseimage 
 
 ############################################################
 # Add Software Repositories
 ############################################################
-RUN apt-get update; apt-get -qy install \
-nano \
-software-properties-common && \
-apt-add-repository ppa:stebbins/handbrake-releases -y && \
+RUN apt-add-repository ppa:stebbins/handbrake-releases -y && \
 apt-get update && \
 apt-get dist-upgrade -qy
 
@@ -89,7 +84,7 @@ mediainfo \
 handbrake-cli \
 mkvtoolnix \
 exiftool \
--y
+-qy
 
 ############################################################
 # Begin Installation WebDAV Zugriff für Fotos
