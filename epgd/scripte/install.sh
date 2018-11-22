@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Dieses Script wird vor dem Programm start ausgeführt
 # copy /etc/epgd /backup/etc/epgd

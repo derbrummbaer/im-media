@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Start Script für Container
 echo "###################################################"
