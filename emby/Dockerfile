@@ -6,7 +6,7 @@
 ############################################################
 
 # Set the base Image
-FROM emby/embyserver:3.5.3.0
+FROM emby/embyserver:4.0.0.2
 
 # File Author / Maintainer
 MAINTAINER Sven Berger
