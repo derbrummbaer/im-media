@@ -42,7 +42,7 @@ RUN adduser --uid $USERID --gid 100 --disabled-login --no-create-home --disabled
 
 RUN apt-get update; \
 	apt-get install software-properties-common -y; \
-	apt-add-repository ppa:frodo-vdr/main -y
+	ppa:yavdr/experimental-vdr -y
 #	apt-add-repository ppa:yavdr/main -y; \
 #	apt-add-repository ppa:frodo-vdr/stable-vdr; \
 RUN apt-get update; \
