@@ -1,10 +1,15 @@
 #!/bin/bash
 set -e
 
+mkdir /usr/local/bin/scripte
+
 case "$1" in
 	handy)
 		echo "Handy Script gewählt"
-		cd /mnt/scripte/handy
+		## Config Einlesen
+		. /mnt/scripte/handy/config
+		cp -r $mv_scripte/handy/* $rn_scripte/handy
+		cd $rn_scripte/handy
 		chmod +x *.sh
 		echo "Scripte"
 		ls -lah
@@ -20,7 +25,10 @@ case "$1" in
 		;;
 	kamera)
  		echo "Kamery Script gewählt"
-		cd /mnt/scripte/kamera
+		## Config Einlesen
+		. /mnt/scripte/kamera/config
+		cp -r $mv_scripte/kamera/* $rn_scripte/kamera
+		cd $rn_scripte/kamera
 		chmod +x *.sh
 		echo "Scripte"
 		ls -lah
