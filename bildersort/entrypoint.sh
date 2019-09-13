@@ -8,7 +8,11 @@ case "$1" in
 		echo "Handy Script gewählt"
 		## Config Einlesen
 		. /mnt/scripte/handy/config
-		mkdir -p $rn_scripte/handy
+		if [ -d $rn_scripte/handy ] ; then
+			echo "Verzeichnis: "$rn_scripte"/handy vorhanden"
+		else
+			mkdir -p $rn_scripte/handy
+		fi
 		cp -r $mv_scripte/handy/* $rn_scripte/handy
 		cd $rn_scripte/handy
 		chmod +x *.sh
@@ -28,7 +32,11 @@ case "$1" in
  		echo "Kamery Script gewählt"
 		## Config Einlesen
 		. /mnt/scripte/kamera/config
-		mkdir -p $rn_scripte/kamera
+		if [ -d $rn_scripte/kamera ] ; then
+			echo "Verzeichnis: "$rn_scripte"/kamera vorhanden"
+		else
+			mkdir -p $rn_scripte/kamera
+		fi
 		cp -r $mv_scripte/kamera/* $rn_scripte/kamera
 		cd $rn_scripte/kamera
 		chmod +x *.sh
