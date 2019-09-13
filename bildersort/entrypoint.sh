@@ -11,6 +11,7 @@ case "$1" in
 		if [ -d $rn_scripte/handy ] ; then
 			echo "Verzeichnis: "$rn_scripte"/handy vorhanden"
 		else
+			echo "Verzeichnis: "$rn_scripte"/handy nicht vorhanden"
 			mkdir -p $rn_scripte/handy
 		fi
 		cp -r $mv_scripte/handy/* $rn_scripte/handy
@@ -35,6 +36,7 @@ case "$1" in
 		if [ -d $rn_scripte/kamera ] ; then
 			echo "Verzeichnis: "$rn_scripte"/kamera vorhanden"
 		else
+			echo "Verzeichnis: "$rn_scripte"/kamera nicht vorhanden"
 			mkdir -p $rn_scripte/kamera
 		fi
 		cp -r $mv_scripte/kamera/* $rn_scripte/kamera
