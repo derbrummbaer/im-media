@@ -1,8 +1,6 @@
 #!/bin/bash
 set -e
 
-mkdir /usr/local/bin/scripte
-
 case "$1" in
 	handy)
 		echo "Handy Script gewählt"
