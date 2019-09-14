@@ -5,6 +5,7 @@ ENV LANG C.UTF-8
 RUN apt-get update && apt-get full-upgrade -y && apt-get install -y \
     exiftool \
     mediainfo \
+    tzdata \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
