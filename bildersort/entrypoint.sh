@@ -56,6 +56,6 @@ case "$1" in
  		echo "Kein Script gewählt"
 		;;
 esac
-		
+date		
 		
 #exec "$@"
