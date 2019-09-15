@@ -2,7 +2,7 @@ FROM ubuntu:bionic
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG C.UTF-8
 
-ENV TZ="Europe/Berline"
+ENV TZ="Europe/Berlin"
 RUN apt-get update && apt-get full-upgrade -y && apt-get install -y \
     exiftool \
     mediainfo \
